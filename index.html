@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>基于αβ剪枝法的井字棋游戏</title>
+	<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+	<div class="layui-container container"> 
+		<h1>基于αβ剪枝法的井字棋游戏</h1>
+		<div class="layui-row">
+			<div class="layui-col-md4">
+				<form class="layui-form">
+					<div class="layui-form-item">
+						<label class="layui-form-label">游戏顺序：</label>
+						<div class="layui-input-block" id="radio" data-value="true">
+							<input type="radio" name="game" value="true" title="玩家优先" lay-filter="player" id="player" checked>
+							<input type="radio" name="game" value="false" title="电脑优先" lay-filter="computer" id="computer">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">搜索深度：</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" required  lay-verify="required" placeholder="请输入搜索深度" autocomplete="off" class="layui-input" value="2" id="dept"  disabled>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo" id="start-game-btn">开始游戏</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="layui-col-md8">
+				<div id="items" class="clearfix">
+					<div class="item" value="0" id="item0"></div>
+					<div class="item" value="1" id="item1"></div>
+					<div class="item" value="2" id="item2"></div>
+					<div class="item" value="3" id="item3"></div>
+					<div class="item" value="4" id="item4"></div>
+					<div class="item" value="5" id="item5"></div>
+					<div class="item" value="6" id="item6"></div>
+					<div class="item" value="7" id="item7"></div>
+					<div class="item" value="8" id="item8"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript">
+		//var isPlayerNow;
+		var layer;
+		var state;
+		layui.use(['form','layer'],function() {
+			var form = layui.form,
+				layer = layui.layer;
+			form.on('submit(formDemo)',function(data) {
+				/*state = data.field.game;
+				var isPlayerNow = true;
+				if (state == 'true') {
+					$('#radio').attr('data-value','true');
+					console.log($('#radio')[0]);
+					//isPlayerNow = true;
+				} else if (state == 'false') {
+					$('#radio').attr('data-value','false');
+					console.log($('#radio')[0]);
+					//isPlayerNow = false;
+				}*/
+				//console.log(isPlayerNow);
+				return false;
+			})
+			
+		})
+		//console.log(isPlayerNow);
+		
+	</script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+html,
+body {
+	height: 100%;
+}
+body {
+	background-color: #f2f2f2;
+	font-family: 'PingFang SC','Microsoft Yahei';
+}
+.clearfix {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+.container {
+	width: 800px;
+	height: 100%;
+	padding: 30px 20px;
+	background-color: rgb(255,255,255);
+	box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.container > h1 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+/**
+ * 开始游戏按钮
+ */
+#start-game-btn {
+	margin-top: 10px;
+}
+
+/**
+ * 棋局
+ */
+#items {
+	width: 330px;
+	margin: 0 auto;
+}
+#items > .item {
+	float: left;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 50px;
+	margin: 5px;
+	text-align: center;
+	color: #393D49;
+	background-color: #eeeeee;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	cursor: pointer;
+}
